@@ -1,0 +1,61 @@
+﻿<html>
+	<head>
+		<title>Kamil Pietrewicz</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta name="theme-color" content="#ffb7de">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+	   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	   crossorigin=""/>
+	</head>
+	<body>
+		<div class="container-fluid main-content">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<div id="accordion">
+					    <div class="card">
+					      <div class="card-header">
+					        <a class="card-link map-link" data-toggle="collapse" href="#collapseOne">
+					          Mapa
+					        </a>
+					      </div>
+					      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+					        <div class="card-body">
+					           <div id="map"></div>
+					        </div>
+					      </div>
+					    </div>
+					    <div class="card">
+					      <div class="card-header">
+					        <a class="collapsed card-link places-link" data-toggle="collapse" href="#places">
+					       	Miejsca
+					      </a>
+					      </div>
+					      <div id="places" class="collapse" data-parent="#accordion">
+					        <div class="card-body">
+					         	<table class="table table-dark places-table">
+					         		<thead>
+					         			<th>Id punktu na mapie</th>
+					         			<th>Szerokość geograficzna</th>
+					         			<th>Długość geograficzna</th>
+					         			<th>Opcje</th>
+					         		</thead>
+					         		<tbody>
+					         			
+					         		</tbody>
+					         	</table>
+					        </div>
+					      </div>
+					    </div>
+					</div>
+			</div>
+		</div>
+		<script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/leaflet.js"></script>
+        <script src="./js/script.js"></script>
+	</body>
+</html>

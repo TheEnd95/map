@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Lato;
+  src: url(../font/Lato-Regular.ttf);
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: Lato;
+  src: url(../font/Lato-Black.ttf);
+  font-weight: 900;
+}
+html,body {
+ font-family: Lato;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ width: 100%;
+ background-color:#fff;
+}
+#accordion {
+  #map {
+    width:100%;
+    min-height:50vh;
+    .leaflet-tile-pane {
+      filter: grayscale(100)  invert(10%);
+    }
+  }
+  .card {
+    border: 1px solid #d11b79;
+    border-radius: 0; 
+    .card-header {
+      background-color:#32383e;
+      padding:0;
+      a {
+        color:#fff;
+        font-size: 16px;
+        text-align: center;
+        display:block;
+        font-weight: 900;
+        text-transform: uppercase;
+        position:relative;
+        overflow: hidden;
+        padding:20px 10px;
+        &:before{
+          content: "";
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: -20px;
+          bottom: -20px;
+          background: #32383e;
+          transition: .4s;
+          transform: rotate(45deg);
+        }
+        &:after{
+          content: "";
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: -20px;
+          right: -20px;
+          background: #32383e;
+          transition: .4s;
+          transform: rotate(45deg);
+        }
+        &:hover:before,&:hover:after{
+          background:#d11b79;
+          transition:.4s;
+        }
+      }
+    }
+    .card-body {
+      padding:0;
+    }
+    .table {
+      margin-bottom:0;
+      font-size:12px;
+      .marker-remove-btn {
+        display:block;
+        background:#d11b79;
+        border:1px solid #d11b79;
+        color:#fff;
+        font-weight: bold;
+        padding:5px 10px;
+        cursor: pointer;
+        transition:.4s;
+        &:hover{
+          background:transparent;
+          transition:.4s;
+        }
+      }
+
+    }
+  }
+}
+@media screen and (min-width: 991px){
+  .main-content{
+    width:60%;
+  }
+  #accordion{
+    .card {
+      .table {
+        font-size: 16px;
+      }
+    }
+  }
+}

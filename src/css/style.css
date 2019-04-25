@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Lato;
+  src: url(../font/Lato-Regular.ttf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: Lato;
+  src: url(../font/Lato-Black.ttf);
+  font-weight: 900; }
+
+html, body {
+  font-family: Lato;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff; }
+
+#accordion #map {
+  width: 100%;
+  min-height: 50vh; }
+  #accordion #map .leaflet-tile-pane {
+    filter: grayscale(100) invert(10%); }
+
+#accordion .card {
+  border: 1px solid #d11b79;
+  border-radius: 0; }
+  #accordion .card .card-header {
+    background-color: #32383e;
+    padding: 0; }
+    #accordion .card .card-header a {
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      display: block;
+      font-weight: 900;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      padding: 20px 10px; }
+      #accordion .card .card-header a:before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -20px;
+        bottom: -20px;
+        background: #32383e;
+        transition: .4s;
+        transform: rotate(45deg); }
+      #accordion .card .card-header a:after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        background: #32383e;
+        transition: .4s;
+        transform: rotate(45deg); }
+      #accordion .card .card-header a:hover:before, #accordion .card .card-header a:hover:after {
+        background: #d11b79;
+        transition: .4s; }
+  #accordion .card .card-body {
+    padding: 0; }
+  #accordion .card .table {
+    margin-bottom: 0;
+    font-size: 12px; }
+    #accordion .card .table .marker-remove-btn {
+      display: block;
+      background: #d11b79;
+      border: 1px solid #d11b79;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: .4s; }
+      #accordion .card .table .marker-remove-btn:hover {
+        background: transparent;
+        transition: .4s; }
+
+@media screen and (min-width: 991px) {
+  .main-content {
+    width: 60%; }
+  #accordion .card .table {
+    font-size: 16px; } }
